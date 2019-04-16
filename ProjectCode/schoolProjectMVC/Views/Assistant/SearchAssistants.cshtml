@@ -1,0 +1,26 @@
+﻿@model schoolProjectMVC.ModelView.AssistantViewModel
+@using schoolProjectMVC.Models;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SearchAssistants</title>
+</head>
+<body>
+    <div>
+        <form action="SearchAssistants" method="post">
+            Enter First Name to search <input id="Text1" name="txtFirstName" type="text" />
+            <br />
+            <input id="Submit1" type="submit" value="Serach Assistant" />
+        </form>
+    </div>
+    <br />
+    
+   @Html.Partial("DisplayAssistants",Model)
+</body>
+</html>

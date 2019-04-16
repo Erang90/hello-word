@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>KeepDataExample</title>
+</head>
+<body>
+    <div>
+        @*@ @TempData["testing"]
+            @{
+                TempData.Keep("testing");
+            }*@
+        @{
+            string str = TempData.Peek("testing").ToString();
+        }
+        @str
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿@model schoolProjectMVC.ModelView.StudentViewModel
+@using schoolProjectMVC.Models;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SearchStudent</title>
+</head>
+<body>
+    <div>
+        <form action="SearchStudent" method="post">
+            Enter First Name to search <input id="Text1" name="SFirstName" type="text" />
+            <br />
+            <input id="Submit1" type="submit" value="Serach Student" />
+        </form>
+    </div>
+    @Html.Partial("DisplayStudents", Model)
+</body>
+</html>

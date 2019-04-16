@@ -1,0 +1,31 @@
+﻿@model schoolProjectMVC.ModelView.AssistantViewModel
+@using schoolProjectMVC.Models
+<span style="color:blue">Current Assistant:</span>
+<br />
+<table>
+    <tr>
+        <td>First Name:</td>
+        <td>Last Name:</td>
+        <td>Assistant ID Number:</td>
+        <td>ssistant Employee Number:</td>
+        <td>Id Student:</td>
+        <td>Assistant Email:</td>
+        <td>Assistant Password:</td>
+    </tr>
+    @foreach (Assistant obj in Model.assistants)
+    {
+    <tr>
+        <td>@obj.AFirstName</td>
+        <td>@obj.ALastName</td>
+        <td>@obj.AIDNumber</td>
+        <td>@obj.AEmployeeNumber</td>
+        <td>@obj.IdStudent</td>
+        <td>@obj.AEmail</td>
+        <td>@obj.APassword</td>
+    </tr>
+    }
+</table>
+@*@{ 
+    WebGrid obj = new WebGrid(Model.assistants);
+}
+@obj.GetHtml()*@

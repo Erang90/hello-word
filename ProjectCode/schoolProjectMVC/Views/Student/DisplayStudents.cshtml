@@ -1,0 +1,27 @@
+﻿@model schoolProjectMVC.ModelView.StudentViewModel
+@using schoolProjectMVC.Models
+<span style="color:blue">Current Student:</span>
+<br />
+<table>
+    <tr>
+        <td>Student First Name:</td>
+        <td>Student Last Name:</td>
+        <td>Student ID Number:</td>
+        <td>Assistant Employee Number:</td>
+        <td>ID Number Of Parent:</td>
+    </tr>
+    @foreach (Student obj in Model.students)
+    {
+        <tr>
+            <td>@obj.SFirstName</td>
+            <td>@obj.SLastName</td>
+            <td>@obj.SIdNumber</td>
+            <td>@obj.SAssistantEmployeeNumber</td>
+            <td>@obj.SIDNumberOfParent</td>
+        </tr>
+    }
+</table>
+@*@{
+        WebGrid obj = new WebGrid(Model.assistants);
+    }
+    @obj.GetHtml()*@

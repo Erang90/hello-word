@@ -1,0 +1,42 @@
+﻿@*@model schoolProjectMVC.Models.Parent*@
+@model schoolProjectMVC.ModelView.ParentViewModel
+@using schoolProjectMVC.Models;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Parent Enter</title>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Submit", "Parent", FormMethod.Post))
+        {
+            <i>Parent First Name:</i> @Html.TextBoxFor(m => m.parent.PFirstName)@Html.ValidationMessageFor(x => x.parent.PFirstName)
+            <br />
+            <i>Parent Last Name: </i>@Html.TextBoxFor(m => m.parent.PLastName)@Html.ValidationMessageFor(x => x.parent.PLastName)
+            <br />
+            <i>Parent ID:</i>@Html.TextBoxFor(m => m.parent.PIdNumber)@Html.ValidationMessageFor(x => x.parent.PIdNumber)
+            <br />
+            <i>Parent Email:</i>@Html.TextBoxFor(m => m.parent.PEmail)@Html.ValidationMessageFor(x => x.parent.PEmail)
+            <br />
+            <i> Parent Password :</i>@Html.TextBoxFor(m => m.parent.PPassword)@Html.ValidationMessageFor(x => x.parent.PPassword)
+            <br />
+            <i> Child Password:</i>@Html.TextBoxFor(m => m.parent.PStudentIdNumber)@Html.ValidationMessageFor(x => x.parent.PStudentIdNumber)
+            <br />
+            <i> Assistant Employee Number:</i>@Html.TextBoxFor(m => m.parent.PAssistantEmployeeNumber)@Html.ValidationMessageFor(x => x.parent.PAssistantEmployeeNumber)
+            <br />
+            <input id="Submit2" type="submit" value="Add Assistant" />
+        }
+        <br />
+        @Html.Partial("DisplayParents", Model)
+    </div>
+</body>
+</html>

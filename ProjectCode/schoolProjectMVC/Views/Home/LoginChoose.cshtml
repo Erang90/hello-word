@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "LoginChoose";
+}
+
+<h2>LoginChoose</h2>
+
+@using (Html.BeginForm("Login", "Teacher", FormMethod.Post))
+{
+    <input type="submit" value="Teacher" )" />
+}
+
+@using (Html.BeginForm("Login", "Assistant", FormMethod.Post))
+{
+    <input type="submit" value="Assistan" )" />
+}
+
+@using (Html.BeginForm("Login", "Parent", FormMethod.Post))
+{
+    <input type="submit" value="Parent" )" />
+}

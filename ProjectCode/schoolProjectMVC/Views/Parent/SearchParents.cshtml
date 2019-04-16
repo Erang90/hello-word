@@ -1,0 +1,25 @@
+﻿@model schoolProjectMVC.ModelView.ParentViewModel
+@using schoolProjectMVC.Models;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SearchParents</title>
+</head>
+<body>
+    <div>
+        <form action="SearchParents" method="post">
+            Enter First Name to search <input id="Text1" name="PFirstName" type="text" />
+            <br />
+            <input id="Submit1" type="submit" value="Serach Parent" />
+        </form>
+        <br/>
+    </div>
+    @Html.Partial("DisplayParents", Model)
+</body>
+</html>

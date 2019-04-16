@@ -1,0 +1,61 @@
+﻿@*@model schoolProjectMVC.Models.Student*@
+@model  schoolProjectMVC.ModelView.StudentViewModel
+@using schoolProjectMVC.Models;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Enter</title>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+</head>
+<body>
+    <div>
+        @*
+        @using (Html.BeginForm("Submit", "Assistant", FormMethod.Post))
+        {
+            <i>First Name:</i> @Html.TextBoxFor(m => m.assistant.AFirstName)@Html.ValidationMessageFor(x => x.assistant.AFirstName)
+            <br />
+            <i>Last Name:</i>@Html.TextBoxFor(m => m.assistant.ALastName)@Html.ValidationMessageFor(x => x.assistant.ALastName)
+            <br />
+            <i>Assistant ID Number:</i>@Html.TextBoxFor(m => m.assistant.AIDNumber)@Html.ValidationMessageFor(x => x.assistant.AIDNumber)
+            <br />
+            <i>Assistant Employee Number:</i>@Html.TextBoxFor(m => m.assistant.AEmployeeNumber)@Html.ValidationMessageFor(x => x.assistant.AEmployeeNumber)
+            <br />
+            <i>Id Student:</i>@Html.TextBoxFor(m => m.assistant.IdStudent)@Html.ValidationMessageFor(x => x.assistant.IdStudent)
+            <br />
+            <i>Assistant Email:</i>@Html.TextBoxFor(m => m.assistant.AEmail)@Html.ValidationMessageFor(x => x.assistant.AEmail)
+            <br />
+            <i>Assistant Password:</i>@Html.TextBoxFor(m => m.assistant.APassword)@Html.ValidationMessageFor(x => x.assistant.APassword)
+            <br />
+            <input id="Submit2" type="submit" value="Add Assistant" />
+        }
+
+        *@
+        @using (Html.BeginForm("Submit", "Student", FormMethod.Post))
+        {
+            <i>Studet First Name:</i> @Html.TextBoxFor(m => m.student.SFirstName)@Html.ValidationMessageFor(x => x.student.SFirstName)
+            <br />
+            <i>Student Last Name: </i>@Html.TextBoxFor(m => m.student.SLastName)@Html.ValidationMessageFor(x => x.student.SLastName)
+            <br />
+            <i> Student ID Number:</i>@Html.TextBoxFor(m => m.student.SIdNumber)@Html.ValidationMessageFor(x => x.student.SIdNumber)
+            <br />
+            <i>Assistant Employee Number:</i>@Html.TextBoxFor(m => m.student.SAssistantEmployeeNumber)@Html.ValidationMessageFor(x => x.student.SAssistantEmployeeNumber)
+            <br />
+            <i> ID Number Of Parent: :</i>@Html.TextBoxFor(m => m.student.SIDNumberOfParent)@Html.ValidationMessageFor(x => x.student.SIDNumberOfParent)
+            <br />
+            <input id="Submit2" type="submit" value="Add Assistant" />
+        }
+        <br />
+        @Html.Partial("DisplayStudents", Model)
+       
+
+    </div>
+</body>
+</html>

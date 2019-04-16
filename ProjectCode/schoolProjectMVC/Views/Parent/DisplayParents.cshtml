@@ -1,0 +1,31 @@
+﻿@model schoolProjectMVC.ModelView.ParentViewModel
+@using schoolProjectMVC.Models
+<span style="color:blue">Current Parent:</span>
+<br />
+<table>
+    <tr>
+        <td>Parent First Name:</td>
+        <td>Parent Last Name:</td>
+        <td>Parent ID Number:</td>
+        <td>Parent Email:</td>
+        <td>Parent Password:</td>
+        <td>Child ID Number:</td>
+        <td>Assistant Employee Number:</td>
+    </tr>
+    @foreach (Parent obj in Model.parents)
+    {
+        <tr>
+            <td>@obj.PFirstName</td>
+            <td>@obj.PLastName</td>
+            <td>@obj.PIdNumber</td>
+            <td>@obj.PEmail</td>
+            <td>@obj.PPassword</td>
+            <td>@obj.PStudentIdNumber</td>
+            <td>@obj.PAssistantEmployeeNumber</td>
+        </tr>
+    }
+</table>
+@*@{
+        WebGrid obj = new WebGrid(Model.assistants);
+    }
+    @obj.GetHtml()*@

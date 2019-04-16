@@ -1,0 +1,41 @@
+﻿@model schoolProjectMVC.Models.Teacher
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Enter</title>
+</head>
+@*<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>*@
+<body>
+    <div>
+        @*<form action="Submit" method="post">*@
+        
+        @using (Html.BeginForm("Submit", "Teacher", FormMethod.Post))
+        {
+            @*First Name:< input id="Text1" name="FirstName" type="text" />*@
+            @*First Name:<input id="Text1" name="FirstName" type="text" value="@Model.FirstName" />@Html.ValidationMessageFor(x => x.FirstName)*@
+            <i>First Name:</i> @Html.TextBoxFor(m => m.FirstName)@Html.ValidationMessageFor(x => x.FirstName)
+            <br />
+            @*Last Name:<input id="Text1" name="LastName" type="text" />*@
+            @*Last Name:<input id="Text1" name="LastName" type="text" value="@Model.LastName" />@Html.ValidationMessageFor(x => x.LastName)*@
+            <i>Last Name:</i>@Html.TextBoxFor(m => m.LastName)@Html.ValidationMessageFor(x => x.LastName)
+            <br />
+            @*Teacher Number:<input id="Text1" name="TeacherId" type="text" />*@
+            @*Teacher Number:<input id="Text1" name="TeacherId" type="text" value="@Model.TeacherId" />@Html.ValidationMessageFor(x => x.TeacherId)*@
+            <i>Teacher Number:</i>@Html.TextBoxFor(m => m.TeacherId)@Html.ValidationMessageFor(x => x.TeacherId)
+            <br />
+            @Html.ValidationSummary()
+            <input id="Submit1" type="submit" value="Add Teacher" />
+        }
+        @*</form>*@
+    </div>
+</body>
+</html>

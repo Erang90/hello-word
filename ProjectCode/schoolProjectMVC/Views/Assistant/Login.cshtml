@@ -1,0 +1,43 @@
+﻿@model schoolProjectMVC.Models.Assistant
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Log_In_Teacher</title>
+</head>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+<body>
+    <div>
+        @ViewData["errormessage"]
+        <br />
+        <table class="table">
+            @using (Html.BeginForm("SubmitLogin", "Assistant", FormMethod.Post))
+            {
+                <tr>
+                    @Html.TextBoxFor(m => m.AFirstName) @Html.ValidationMessageFor(x => x.AFirstName)
+                    <i> : Name</i>
+                </tr>
+                <br />
+                <tr>
+                    @Html.TextBoxFor(m => m.AIDNumber) @Html.ValidationMessageFor(x => x.AIDNumber)
+                    <i>  : KeyID</i>
+                </tr>
+                <br />
+                <tr>
+                    <input id="Enter" type="submit" value="submit" />
+                </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>
